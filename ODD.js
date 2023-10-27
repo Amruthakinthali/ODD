@@ -1,11 +1,12 @@
 /**
- * This is an implentation of ODD(OneDigitDifference)Number program
+ * This is an implentation of ODD(OneDigitDifference)Number program forexample
+ *Take this number 345456. Each pair of consecutive digits of 345456 has a difference of on.
+ *these numbers are called one-digit-difference numbers. Or ODD numbers.
+ *Print all the ODD numbers count and also print all the ODD prime numbers count.
  */
-
 //initialization of min and max numbers
 let min = 0
 let max = 10000000
-
 let count = 0
 /**
  * This is a differnce function to check the difference between the digits of a number.
@@ -22,49 +23,41 @@ function difference(i){
         if (Math.abs(Number(str[j]) - Number(str[j+1])) != 1){
             return false
         }
-
     }
     return true
 }
 /**
  * This is helper function to check prime numbers
  *@param {Number} to check the given number is prime.
- *@returns {boolean} if the number is prime then it returns true else 
- *it returns false.
+ *@returns {boolean} if the number is prime then it returns true
+ *else it returns false.
  */
 function Prime(n){
     if (n <= 1) 
     return false; 
-
 // Check from 2 to n-1 
 for (let i = 2; i < n; i++) 
     if (n % i == 0) 
         return false; 
-
 return true; 
 } 
-
 /**
  *This is a helper function to check each and every number between 0 and 
- * 10 million 
+ * 10 million and print the ODD numbers.
  */
 function testing(){
-
-
 for (let i = min; i < max; i++) {
         if (difference(i) == true){
         ODDlist.push(i);
         count++
         }
     }
-
     console.log("Total ODD numbers :", count);
 }
-
 /**
- * this is hepler function 
+ * This is hepler function to print the ODD prime numbers.
  */
-let ODDlist = [];
+let ODDlist = [];//Empty list/array is created.
 function testprime(){
     let primecount = 0; 
     for (let i = 0; i < ODDlist.length; i++) {
@@ -76,7 +69,7 @@ function testprime(){
 } 
 
 /**
- * this main function to call the helping functions
+ * This main function to call the helping functions
  */
 function main(){
     testing()
