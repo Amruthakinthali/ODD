@@ -28,6 +28,9 @@ function difference(i){
 }
 /**
  * This is helper function to check prime numbers
+ *@param {Number} to check the given number is prime.
+ *@returns {boolean} if the number is prime then it returns true else 
+ *it returns false.
  */
 function Prime(n){
     if (n <= 1) 
