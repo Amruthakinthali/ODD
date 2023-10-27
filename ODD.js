@@ -14,6 +14,9 @@ let count = 0
  * then it returns true to the calling function.
  */
 function difference(i){
+    if (i<10){
+        return false
+    }
     let str = i.toString()
     for (let j = 0; j < str.length - 1; j++){
         if (Math.abs(Number(str[j]) - Number(str[j+1])) != 1){
